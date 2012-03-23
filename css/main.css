@@ -117,3 +117,10 @@ table#mc-chatmsgs tr:nth-child(odd) td {
 table#mc-chatmsgs tr td:first-child {
     font-weight: bold;
 }
+
+code {
+    margin-left: 2px;
+    margin-right: 2px;
+    background-color: #f0f0f0;
+    border: 1px solid #d0d0d0;
+}
