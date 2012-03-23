@@ -1,0 +1,17 @@
+---
+layout: base 
+title: Tags!
+---
+
+<h1>Posts with tag "{{ page.tag }}"</h1>
+Below you'll find all the posts with this tag.
+
+<ul>
+    {% for post in site.posts %}
+        {% for tag in post.tags %}
+            {% if tag == page.tag %}
+                <li><a href="{{ site.baseurl }}{{post.url}}">{{ post.title }}</a> - {{ post.date | date: "%B %d, %Y" }} </li>
+            {% endif %}
+        {% endfor %}
+    {% endfor %}
+</ul>

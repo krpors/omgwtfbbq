@@ -1,0 +1,10 @@
+# Expected Jekyll configuration parameters:
+destination: /var/www/root
+pygments: true
+
+exclude: Session.vim
+
+permalink: /blog/:categories/:year/:month/:day/:title.html
+
+# Custom parameters:
+baseurl: http://omgwtfbbq.nl

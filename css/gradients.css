@@ -1,0 +1,31 @@
+.gradient-white-gray {
+    background-image: linear-gradient(bottom, rgb(255,255,255) 0%, rgb(219,219,219) 100%);
+    background-image: -o-linear-gradient(bottom, rgb(255,255,255) 0%, rgb(219,219,219) 100%);
+    background-image: -moz-linear-gradient(bottom, rgb(255,255,255) 0%, rgb(219,219,219) 100%);
+    background-image: -webkit-linear-gradient(bottom, rgb(255,255,255) 0%, rgb(219,219,219) 100%);
+    background-image: -ms-linear-gradient(bottom, rgb(255,255,255) 0%, rgb(219,219,219) 100%);
+
+    background-image: -webkit-gradient(
+        linear,
+        left bottom,
+        left top,
+        color-stop(0.00, rgb(255,255,255)),
+        color-stop(1.00, rgb(219,219,219))
+    );
+}
+
+.gradient-gray-white {
+    background-image: linear-gradient(bottom, rgb(218,219,219) 0%, rgb(255,255,255) 100%);
+    background-image: -o-linear-gradient(bottom, rgb(218,219,219) 0%, rgb(255,255,255) 100%);
+    background-image: -moz-linear-gradient(bottom, rgb(218,219,219) 0%, rgb(255,255,255) 100%);
+    background-image: -webkit-linear-gradient(bottom, rgb(218,219,219) 0%, rgb(255,255,255) 100%);
+    background-image: -ms-linear-gradient(bottom, rgb(218,219,219) 0%, rgb(255,255,255) 100%);
+
+    background-image: -webkit-gradient(
+        linear,
+        left bottom,
+        left top,
+        color-stop(0, rgb(218,219,219)),
+        color-stop(1, rgb(255,255,255))
+    );
+}

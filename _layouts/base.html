@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en-EN">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
+    <meta name="keywords" content="omgwtfbbq, omg, wtf, bbq, azzkikr" >
+
+    <link rel="stylesheet" href="{{ site.baseurl }}/css/main.css"/>
+    <link rel="stylesheet" href="{{ site.baseurl }}/css/layout.css"/>
+    <link rel="stylesheet" href="{{ site.baseurl }}/css/gradients.css"/>
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script type="text/javascript"> 
+        $(function() {
+            $("div.navigation a").mousedown(function() {
+                $(this).removeClass("gradient-gray-white").addClass("gradient-white-gray");
+            });
+
+            $("div.navigation a").mouseleave(function() {
+                $(this).removeClass("gradient-white-gray").addClass("gradient-gray-white");
+            });
+
+        });
+    </script>
+    <title>OMG! {{ page.header-title }}</title>
+</head>
+<body>
+    <div id="wrap">
+        <div id="header">
+            <div class="title">OMG! {{ page.header-title }} </div>
+            <div class="navigation">
+                <a class="gradient-gray-white" href="{{ site.baseurl }}/index.html">Home</a>
+                <a class="gradient-gray-white" href="{{ site.baseurl }}/mc.html">Minecraft</a>
+                <a class="gradient-gray-white" href="{{ site.baseurl }}/serverstats.html">Sirvir Stats</a>
+            </div>
+        </div>
+        <div id="main">
+            <div id="main-header">
+                <img src="{{ site.baseurl }}/img/rainbow-fart.jpg" 
+                    style="margin: 14px 0px 14px 14px; border: 1px solid #d0d0d0;"/>
+                <span class="courtesy"><a href="http://divineerror.deviantart.com/" target="_blank">Image courtesy</a></span>
+            </div>
+            <div id="content">
+                {{ content }}
+            </div>
+        </div>
+    </div>
+    <div id="footer">
+        <div>
+            Site generated on {{ site.time | date: "%d %B %Y around %H:%M:%S" }},
+            powered by <a href="https://github.com/mojombo/jekyll">Jekyll</a>, theme by me, 
+            banner image by <a href="http://fav.me/d25ivi7" target="_blank">DivineError</a>.
+        </div>
+    </div>
+
+</body>
+</html>
