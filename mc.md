@@ -14,7 +14,16 @@ statistics and information are gathered from the server.log file.
 
 These are the unique users who've logged in at least once in the server.
 <div class="mc-users">
-    Loading ``/mcstats/users.html``, hold on.
+    Loading <code>/mcstats/users.html</code>, hold on.
+</div>
+
+Last 20 logins:
+---------------
+
+This is a list with the last 20 logins:
+
+<div class="mc-logins">
+    Loading <code>/mcstats/logins.html</code>, hold on.
 </div>
 
 
@@ -28,38 +37,27 @@ The last 50 lines of the chat log.
 </div>
 
 <script type="text/javascript">
+    function crud(thediv, theurl) {
+        $.ajax({
+            url: theurl,
+            success: function(data) {
+                if (data == "") {
+                    $(thediv).html("File is empty!");
+                } else {
+                    $(thediv).html(data);
+                }
+            },
+            statusCode: {
+                404: function(data) {
+                $(thediv).html("No file to parse!");
+                }
+            },
+        });
+    }
+
     $(function() {
-        $.ajax({
-            url: "mcstats/users.html",
-            success: function(data) {
-                if (data == "") {
-                    $("div.mc-users").html("File is empty!");
-                } else {
-                    $("div.mc-users").html(data);
-                }
-            },
-            statusCode: {
-                404: function(data) {
-                $("div.mcstats").html("No file to parse!");
-                }
-            },
-        });
-
-        $.ajax({
-            url: "mcstats/chatmsgs.html",
-            success: function(data) {
-                if (data == "") {
-                    $("div.mc-chatmsgs").html("File is empty!");
-                } else {
-                    $("div.mc-chatmsgs").html(data);
-                }
-            },
-            statusCode: {
-                404: function(data) {
-                $("div.chatmsgs").html("No file to parse!");
-                }
-            },
-        });
-
+        crud("div.mc-users", "mcstats/users.html");
+        crud("div.mc-chatmsgs", "mcstats/chatmsgs.html");
+        crud("div.mc-logins", "mcstats/logins.html");
     });
 </script>
