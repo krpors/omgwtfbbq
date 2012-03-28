@@ -6,11 +6,6 @@ footerheight: 40px
  * "User" styles.
  */
 
-@font-face { font-family: Ubuntu; src: url('{{ site.baseurl }}/fonts/ubuntu.ttf'); }
-@font-face { font-family: Ubuntu; font-weight: bold; src: url('{{ site.baseurl }}/fonts/ubuntu-b.ttf'); } 
-@font-face { font-family: Ubuntu; font-style:  italic; src: url('{{ site.baseurl }}/fonts/ubuntu-ri.ttf'); }
-@font-face { font-family: Ubuntu; font-weight: bold; font-style: italic; src: url('{{ site.baseurl }}/fonts/ubuntu-bi.ttf'); } 
-
 a {
     color: #5296e7;
 }
@@ -96,9 +91,12 @@ span.tag {
     opacity: 0.6;
     color: white;
     padding: 3px 5px 3px 5px;
+    margin-right: -5px;
     font-size: 7pt;
     text-shadow: none;
     border-radius: 5px;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 0px;
 }
 
 h1 {
