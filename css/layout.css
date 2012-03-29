@@ -107,7 +107,7 @@ div#content {
     margin-top: 15px;
     margin-bottom: 15px;
     padding: 20px;
-    opacity: 0.9;
+    z-index: -6;
 }
 
 div#footer {
