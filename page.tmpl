@@ -3,7 +3,7 @@
 <html lang="en">
     <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="./css/default.css"/>
+    <link rel="stylesheet" href="/static/css/default.css"/>
     <title>omgwtfbbq.nl - {{ if .Title }} {{ .Title }} {{ end }}</title>
     <meta name="description" content="Omgwtfbbq">
     <meta name="author" content="Kevin Pors">
@@ -28,6 +28,5 @@
 {{define "page"}}
     {{ template "header" . }}
         {{ .Content }}
-    </section>
     {{ template "footer" . }}
 {{end}}

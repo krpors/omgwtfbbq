@@ -7,7 +7,11 @@ OUTPUT = _out
 *.md:
 	config
 	ext .html
-	directorify
 	inner-template
 	markdown
 	template page
+
+# Ignore all files ending with ~, since those are most likely
+# written vim buffers or some stuff.
+*~:
+	ignore
