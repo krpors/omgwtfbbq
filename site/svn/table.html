@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>SVN log in a table</title>
+	<link rel="stylesheet" href="/static/css/tablesorter.css"/>
+	<style>
+		body {
+			font-family: "Courier New";
+			font-size: 10pt;
+		}
+	</style>
+    <script type="text/javascript" src="/static/js/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="/static/js/jquery.tablesorter.js"></script>
+  </head>
+  <body>
+	<script>
+$(document).ready(function() { 
+		// load data using ajax lol
+		$.get("tabledata.dat", function(data) { 
+			$("body").prepend(data);
+			$("#table").tablesorter(); 
+			$("td:contains('ex4e5')").css("background-color", "red").css("color", "white");
+			$("td:contains('ex4d4')").css("background-color", "blue").css("color", "white");
+		});
+    } 
+); 
+    
+	</script>
+  </body>
+</html>
