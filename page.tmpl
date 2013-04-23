@@ -1,0 +1,33 @@
+{{define "header"}}
+<!doctype html>
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./css/default.css"/>
+    <title>omgwtfbbq.nl - {{ if .Title }} {{ .Title }} {{ end }}</title>
+    <meta name="description" content="Omgwtfbbq">
+    <meta name="author" content="Kevin Pors">
+    </head>
+    <body>
+        <header>
+            <h1 class="site-title">omgwtfbbq.nl</h1>
+        </header>
+        <section class="site-container">
+{{end}}
+
+
+{{define "footer"}}
+        </section>
+        <footer>
+        </footer>
+    </body>
+</html>
+{{end}}
+
+
+{{define "page"}}
+    {{ template "header" . }}
+        {{ .Content }}
+    </section>
+    {{ template "footer" . }}
+{{end}}

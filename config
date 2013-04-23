@@ -1,0 +1,13 @@
+# vim: ft=make
+
+TEMPLATES = page.tmpl
+SOURCE = site
+OUTPUT = _out
+
+*.md:
+	config
+	ext .html
+	directorify
+	inner-template
+	markdown
+	template page

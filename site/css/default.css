@@ -1,0 +1,42 @@
+@font-face {
+    font-family: 'Droid Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Droid Sans'), local('DroidSans'), url(http://themes.googleusercontent.com/static/fonts/droidsans/v3/s-BiyweUPV0v-yRb-cjciBsxEYwM7FgeyaSgU71cLG0.woff) format('woff');
+}
+
+body {
+    @import url(http://fonts.googleapis.com/css?family=Droid+Sans);
+    font-family: "Droid Sans", "sans-serif";
+    font-size: 10pt;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1.site-title {
+    background-color: #FFD973;
+    padding: 5px;
+    text-align: center;
+}
+
+section.site-container {
+    padding: 12px;
+    background-color: #fcfcfc;
+}
+
+a {
+    color: #5A92FF;
+}
+
+a:visited {
+    color: #5A92FF;
+}
+
+pre {
+    border: 1px solid #f0f0f0;
+    padding: 5px;
+    overflow: auto;
+    height: 250px;
+    background-color: white;
+}
